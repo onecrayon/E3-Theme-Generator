@@ -1,0 +1,1258 @@
+// _base.scss
+// Colors all built-in languages for Espresso 3.
+
+// USAGE:
+// $theme-name: "My lovely theme";
+// $text: #ffffcc;
+// $background: #663399;
+// @import "_base";
+
+// =============================================================================
+
+//* Theme settings
+
+$theme-name: "Unnamed Theme" !default; //: STR|REQ
+$theme-placeholders: null !default; //: STR
+
+//* Base
+
+$text: #000 !default; //: COL|REQ
+$background: #fff !default; //: COL|REQ
+
+$background-opacity: null !default; //: OP
+$current-line: null !default; //: COL
+$current-line-opacity: null !default; //: OP
+$selection-background: default !default; //: COL,default
+
+//* Common
+
+$comment: #b2b2b2 !default; //: ALL|REQ
+$comment-weight: null !default;
+$comment-style: null !default;
+$comment-background: null !default;
+$comment-background-opacity: null !default;
+
+$string: #bc670f !default; //: ALL|REQ
+$string-weight: null !default;
+$string-style: null !default;
+$string-background: null !default;
+$string-background-opacity: null !default;
+
+$variable: #4f9fcf !default; //: ALL|REQ
+$variable-weight: null !default;
+$variable-style: null !default;
+$variable-background: null !default;
+$variable-background-opacity: null !default;
+
+$keyword: #6700b9 !default; //: ALL|REQ
+$keyword-weight: null !default;
+$keyword-style: null !default;
+$keyword-background: null !default;
+$keyword-background-opacity: null !default;
+
+$constant: #7653c1 !default; //: ALL|REQ
+$constant-weight: null !default;
+$constant-style: null !default;
+$constant-background: null !default;
+$constant-background-opacity: null !default;
+
+$function: #3a1d72 !default; //: ALL|REQ
+$function-weight: null !default;
+$function-style: null !default;
+$function-background: null !default;
+$function-background-opacity: null !default;
+
+$punctuation: null !default; //: ALL
+$punctuation-weight: null !default;
+$punctuation-style: null !default;
+$punctuation-background: null !default;
+$punctuation-background-opacity: null !default;
+
+$operator: null !default; //: ALL
+$operator-weight: null !default;
+$operator-style: null !default;
+$operator-background: null !default;
+$operator-background-opacity: null !default;
+
+$comment-punctuation: null !default; //: ALL
+$comment-punctuation-weight: null !default;
+$comment-punctuation-style: null !default;
+$comment-punctuation-background: null !default;
+$comment-punctuation-background-opacity: null !default;
+
+$comment-keyword: null !default; //: ALL
+$comment-keyword-weight: null !default;
+$comment-keyword-style: null !default;
+$comment-keyword-background: null !default;
+$comment-keyword-background-opacity: null !default;
+
+$string-punctuation: null !default; //: ALL
+$string-punctuation-weight: null !default;
+$string-punctuation-style: null !default;
+$string-punctuation-background: null !default;
+$string-punctuation-background-opacity: null !default;
+
+$character-escape: null !default; //: ALL
+$character-escape-weight: null !default;
+$character-escape-style: null !default;
+$character-escape-background: null !default;
+$character-escape-background-opacity: null !default;
+
+$variable-punctuation: null !default; //: ALL
+$variable-punctuation-weight: null !default;
+$variable-punctuation-style: null !default;
+$variable-punctuation-background: null !default;
+$variable-punctuation-background-opacity: null !default;
+
+$function-call: null !default; //: ALL
+$function-call-weight: null !default;
+$function-call-style: null !default;
+$function-call-background: null !default;
+$function-call-background-opacity: null !default;
+
+$invalid: null !default; //: ALL
+$invalid-weight: null !default;
+$invalid-style: null !default;
+$invalid-background: null !default;
+$invalid-background-opacity: null !default;
+
+//* HTML
+
+$tag: #84bfef !default; //: ALL|REQ
+$tag-weight: null !default;
+$tag-style: null !default;
+$tag-background: null !default;
+$tag-background-opacity: null !default;
+
+$tag-name: null !default; //: ALL
+$tag-name-weight: null !default;
+$tag-name-style: null !default;
+$tag-name-background: null !default;
+$tag-name-background-opacity: null !default;
+
+$tag-string: null !default; //: ALL
+$tag-string-weight: null !default;
+$tag-string-style: null !default;
+$tag-string-background: null !default;
+$tag-string-background-opacity: null !default;
+
+$tag-string-punctuation: null !default; //: ALL
+$tag-string-punctuation-weight: null !default;
+$tag-string-punctuation-style: null !default;
+$tag-string-punctuation-background: null !default;
+$tag-string-punctuation-background-opacity: null !default;
+
+$tag-attribute: null !default; //: ALL
+$tag-attribute-weight: null !default;
+$tag-attribute-style: null !default;
+$tag-attribute-background: null !default;
+$tag-attribute-background-opacity: null !default;
+
+$html-entity: null !default; //: ALL
+$html-entity-weight: null !default;
+$html-entity-style: null !default;
+$html-entity-background: null !default;
+$html-entity-background-opacity: null !default;
+
+$embedded-javascript: null !default; //: COL,BACK,OP
+$embedded-javascript-background: null !default;
+$embedded-javascript-background-opacity: null !default;
+
+$embedded-css: null !default; //: COL,BACK,OP
+$embedded-css-background: null !default;
+$embedded-css-background-opacity: null !default;
+
+$embedded-php: null !default; //: COL,BACK,OP
+$embedded-php-background: null !default;
+$embedded-php-background-opacity: null !default;
+
+$embedded-ruby: null !default; //: COL,BACK,OP
+$embedded-ruby-background: null !default;
+$embedded-ruby-background-opacity: null !default;
+
+//* CSS
+
+$selector: #3a77bf !default; //: ALL|REQ
+$selector-weight: null !default;
+$selector-style: null !default;
+$selector-background: null !default;
+$selector-background-opacity: null !default;
+
+$property-name: #d4430d !default; //: ALL|REQ
+$property-name-weight: null !default;
+$property-name-style: null !default;
+$property-name-background: null !default;
+$property-name-background-opacity: null !default;
+
+$property-value: #43a202 !default; //: ALL|REQ
+$property-value-weight: null !default;
+$property-value-style: null !default;
+$property-value-background: null !default;
+$property-value-background-opacity: null !default;
+
+$monotone-property-values: null !default; //: true
+
+$css-punctuation: null !default; //: ALL
+$css-punctuation-weight: null !default;
+$css-punctuation-style: null !default;
+$css-punctuation-background: null !default;
+$css-punctuation-background-opacity: null !default;
+
+$css-string: null !default; //: ALL
+$css-string-weight: null !default;
+$css-string-style: null !default;
+$css-string-background: null !default;
+$css-string-background-opacity: null !default;
+
+$css-string-punctuation: null !default; //: ALL
+$css-string-punctuation-weight: null !default;
+$css-string-punctuation-style: null !default;
+$css-string-punctuation-background: null !default;
+$css-string-punctuation-background-opacity: null !default;
+
+$css-variable: null !default; //: ALL
+$css-variable-weight: null !default;
+$css-variable-style: null !default;
+$css-variable-background: null !default;
+$css-variable-background-opacity: null !default;
+
+$css-variable-punctuation: null !default; //: ALL
+$css-variable-punctuation-weight: null !default;
+$css-variable-punctuation-style: null !default;
+$css-variable-punctuation-background: null !default;
+$css-variable-punctuation-background-opacity: null !default;
+
+$css-keyword: null !default; //: ALL
+$css-keyword-weight: null !default;
+$css-keyword-style: null !default;
+$css-keyword-background: null !default;
+$css-keyword-background-opacity: null !default;
+
+$css-constant: null !default; //: ALL
+$css-constant-weight: null !default;
+$css-constant-style: null !default;
+$css-constant-background: null !default;
+$css-constant-background-opacity: null !default;
+
+$css-function: null !default; //: ALL
+$css-function-weight: null !default;
+$css-function-style: null !default;
+$css-function-background: null !default;
+$css-function-background-opacity: null !default;
+
+$css-function-punctuation: null !default; //: ALL
+$css-function-punctuation-weight: null !default;
+$css-function-punctuation-style: null !default;
+$css-function-punctuation-background: null !default;
+$css-function-punctuation-background-opacity: null !default;
+
+//* Markdown
+
+$markdown-punctuation: null !default; //: ALL
+$markdown-punctuation-weight: null !default;
+$markdown-punctuation-style: null !default;
+$markdown-punctuation-background: null !default;
+$markdown-punctuation-background-opacity: null !default;
+
+$markdown-separator: null !default; //: ALL
+$markdown-separator-weight: null !default;
+$markdown-separator-style: null !default;
+$markdown-separator-background: null !default;
+$markdown-separator-background-opacity: null !default;
+
+$markdown-header: null !default; //: ALL
+$markdown-header-weight: null !default;
+$markdown-header-style: null !default;
+$markdown-header-background: null !default;
+$markdown-header-background-opacity: null !default;
+
+$markdown-link: null !default; //: ALL
+$markdown-link-weight: null !default;
+$markdown-link-style: null !default;
+$markdown-link-background: null !default;
+$markdown-link-background-opacity: null !default;
+
+$markdown-url: null !default; //: ALL
+$markdown-url-weight: null !default;
+$markdown-url-style: null !default;
+$markdown-url-background: null !default;
+$markdown-url-background-opacity: null !default;
+
+$markdown-reference: null !default; //: ALL
+$markdown-reference-weight: null !default;
+$markdown-reference-style: null !default;
+$markdown-reference-background: null !default;
+$markdown-reference-background-opacity: null !default;
+
+$markdown-code: null !default; //: ALL
+$markdown-code-weight: null !default;
+$markdown-code-style: null !default;
+$markdown-code-background: null !default;
+$markdown-code-background-opacity: null !default;
+
+$markdown-code-punctuation: null !default; //: ALL
+$markdown-code-punctuation-weight: null !default;
+$markdown-code-punctuation-style: null !default;
+$markdown-code-punctuation-background: null !default;
+$markdown-code-punctuation-background-opacity: null !default;
+
+//* Javascript
+
+$js-punctuation: null !default; //: ALL
+$js-punctuation-weight: null !default;
+$js-punctuation-style: null !default;
+$js-punctuation-background: null !default;
+$js-punctuation-background-opacity: null !default;
+
+$js-operator: null !default; //: ALL
+$js-operator-weight: null !default;
+$js-operator-style: null !default;
+$js-operator-background: null !default;
+$js-operator-background-opacity: null !default;
+
+$js-string: null !default; //: ALL
+$js-string-weight: null !default;
+$js-string-style: null !default;
+$js-string-background: null !default;
+$js-string-background-opacity: null !default;
+
+$js-string-punctuation: null !default; //: ALL
+$js-string-punctuation-weight: null !default;
+$js-string-punctuation-style: null !default;
+$js-string-punctuation-background: null !default;
+$js-string-punctuation-background-opacity: null !default;
+
+$js-character-escape: null !default; //: ALL
+$js-character-escape-weight: null !default;
+$js-character-escape-style: null !default;
+$js-character-escape-background: null !default;
+$js-character-escape-background-opacity: null !default;
+
+$js-keyword: null !default; //: ALL
+$js-keyword-weight: null !default;
+$js-keyword-style: null !default;
+$js-keyword-background: null !default;
+$js-keyword-background-opacity: null !default;
+
+$js-constant: null !default; //: ALL
+$js-constant-weight: null !default;
+$js-constant-style: null !default;
+$js-constant-background: null !default;
+$js-constant-background-opacity: null !default;
+
+$js-function: null !default; //: ALL
+$js-function-weight: null !default;
+$js-function-style: null !default;
+$js-function-background: null !default;
+$js-function-background-opacity: null !default;
+
+$js-function-call: null !default; //: ALL
+$js-function-call-weight: null !default;
+$js-function-call-style: null !default;
+$js-function-call-background: null !default;
+$js-function-call-background-opacity: null !default;
+
+//* PHP
+
+$php-delimiter: null !default; //: ALL
+$php-delimiter-weight: null !default;
+$php-delimiter-style: null !default;
+$php-delimiter-background: null !default;
+$php-delimiter-background-opacity: null !default;
+
+$php-punctuation: null !default; //: ALL
+$php-punctuation-weight: null !default;
+$php-punctuation-style: null !default;
+$php-punctuation-background: null !default;
+$php-punctuation-background-opacity: null !default;
+
+$php-operator: null !default; //: ALL
+$php-operator-weight: null !default;
+$php-operator-style: null !default;
+$php-operator-background: null !default;
+$php-operator-background-opacity: null !default;
+
+$php-string: null !default; //: ALL
+$php-string-weight: null !default;
+$php-string-style: null !default;
+$php-string-background: null !default;
+$php-string-background-opacity: null !default;
+
+$php-string-punctuation: null !default; //: ALL
+$php-string-punctuation-weight: null !default;
+$php-string-punctuation-style: null !default;
+$php-string-punctuation-background: null !default;
+$php-string-punctuation-background-opacity: null !default;
+
+$php-character-escape: null !default; //: ALL
+$php-character-escape-weight: null !default;
+$php-character-escape-style: null !default;
+$php-character-escape-background: null !default;
+$php-character-escape-background-opacity: null !default;
+
+$php-variable: null !default; //: ALL
+$php-variable-weight: null !default;
+$php-variable-style: null !default;
+$php-variable-background: null !default;
+$php-variable-background-opacity: null !default;
+
+$php-variable-punctuation: null !default; //: ALL
+$php-variable-punctuation-weight: null !default;
+$php-variable-punctuation-style: null !default;
+$php-variable-punctuation-background: null !default;
+$php-variable-punctuation-background-opacity: null !default;
+
+$php-keyword: null !default; //: ALL
+$php-keyword-weight: null !default;
+$php-keyword-style: null !default;
+$php-keyword-background: null !default;
+$php-keyword-background-opacity: null !default;
+
+$php-constant: null !default; //: ALL
+$php-constant-weight: null !default;
+$php-constant-style: null !default;
+$php-constant-background: null !default;
+$php-constant-background-opacity: null !default;
+
+$php-function: null !default; //: ALL
+$php-function-weight: null !default;
+$php-function-style: null !default;
+$php-function-background: null !default;
+$php-function-background-opacity: null !default;
+
+$php-function-call: null !default; //: ALL
+$php-function-call-weight: null !default;
+$php-function-call-style: null !default;
+$php-function-call-background: null !default;
+$php-function-call-background-opacity: null !default;
+
+//* Python
+
+$python-punctuation: null !default; //: ALL
+$python-punctuation-weight: null !default;
+$python-punctuation-style: null !default;
+$python-punctuation-background: null !default;
+$python-punctuation-background-opacity: null !default;
+
+$python-operator: null !default; //: ALL
+$python-operator-weight: null !default;
+$python-operator-style: null !default;
+$python-operator-background: null !default;
+$python-operator-background-opacity: null !default;
+
+$python-string: null !default; //: ALL
+$python-string-weight: null !default;
+$python-string-style: null !default;
+$python-string-background: null !default;
+$python-string-background-opacity: null !default;
+
+$python-string-punctuation: null !default; //: ALL
+$python-string-punctuation-weight: null !default;
+$python-string-punctuation-style: null !default;
+$python-string-punctuation-background: null !default;
+$python-string-punctuation-background-opacity: null !default;
+
+$python-character-escape: null !default; //: ALL
+$python-character-escape-weight: null !default;
+$python-character-escape-style: null !default;
+$python-character-escape-background: null !default;
+$python-character-escape-background-opacity: null !default;
+
+$python-variable: null !default; //: ALL
+$python-variable-weight: null !default;
+$python-variable-style: null !default;
+$python-variable-background: null !default;
+$python-variable-background-opacity: null !default;
+
+$python-keyword: null !default; //: ALL
+$python-keyword-weight: null !default;
+$python-keyword-style: null !default;
+$python-keyword-background: null !default;
+$python-keyword-background-opacity: null !default;
+
+$python-constant: null !default; //: ALL
+$python-constant-weight: null !default;
+$python-constant-style: null !default;
+$python-constant-background: null !default;
+$python-constant-background-opacity: null !default;
+
+$python-function: null !default; //: ALL
+$python-function-weight: null !default;
+$python-function-style: null !default;
+$python-function-background: null !default;
+$python-function-background-opacity: null !default;
+
+$python-function-call: null !default; //: ALL
+$python-function-call-weight: null !default;
+$python-function-call-style: null !default;
+$python-function-call-background: null !default;
+$python-function-call-background-opacity: null !default;
+
+//* Ruby
+
+$ruby-delimiter: null !default; //: ALL
+$ruby-delimiter-weight: null !default;
+$ruby-delimiter-style: null !default;
+$ruby-delimiter-background: null !default;
+$ruby-delimiter-background-opacity: null !default;
+
+$ruby-punctuation: null !default; //: ALL
+$ruby-punctuation-weight: null !default;
+$ruby-punctuation-style: null !default;
+$ruby-punctuation-background: null !default;
+$ruby-punctuation-background-opacity: null !default;
+
+$ruby-operator: null !default; //: ALL
+$ruby-operator-weight: null !default;
+$ruby-operator-style: null !default;
+$ruby-operator-background: null !default;
+$ruby-operator-background-opacity: null !default;
+
+$ruby-string: null !default; //: ALL
+$ruby-string-weight: null !default;
+$ruby-string-style: null !default;
+$ruby-string-background: null !default;
+$ruby-string-background-opacity: null !default;
+
+$ruby-string-punctuation: null !default; //: ALL
+$ruby-string-punctuation-weight: null !default;
+$ruby-string-punctuation-style: null !default;
+$ruby-string-punctuation-background: null !default;
+$ruby-string-punctuation-background-opacity: null !default;
+
+$ruby-character-escape: null !default; //: ALL
+$ruby-character-escape-weight: null !default;
+$ruby-character-escape-style: null !default;
+$ruby-character-escape-background: null !default;
+$ruby-character-escape-background-opacity: null !default;
+
+$ruby-variable: null !default; //: ALL
+$ruby-variable-weight: null !default;
+$ruby-variable-style: null !default;
+$ruby-variable-background: null !default;
+$ruby-variable-background-opacity: null !default;
+
+$ruby-keyword: null !default; //: ALL
+$ruby-keyword-weight: null !default;
+$ruby-keyword-style: null !default;
+$ruby-keyword-background: null !default;
+$ruby-keyword-background-opacity: null !default;
+
+$ruby-constant: null !default; //: ALL
+$ruby-constant-weight: null !default;
+$ruby-constant-style: null !default;
+$ruby-constant-background: null !default;
+$ruby-constant-background-opacity: null !default;
+
+$ruby-function: null !default; //: ALL
+$ruby-function-weight: null !default;
+$ruby-function-style: null !default;
+$ruby-function-background: null !default;
+$ruby-function-background-opacity: null !default;
+
+$ruby-function-call: null !default; //: ALL
+$ruby-function-call-weight: null !default;
+$ruby-function-call-style: null !default;
+$ruby-function-call-background: null !default;
+$ruby-function-call-background-opacity: null !default;
+
+//* Regex
+
+$regex: null !default; //: ALL
+$regex-weight: null !default;
+$regex-style: null !default;
+$regex-background: null !default;
+$regex-background-opacity: null !default;
+
+$regex-punctuation: null !default; //: ALL
+$regex-punctuation-weight: null !default;
+$regex-punctuation-style: null !default;
+$regex-punctuation-background: null !default;
+$regex-punctuation-background-opacity: null !default;
+
+$regex-operator: null !default; //: ALL
+$regex-operator-weight: null !default;
+$regex-operator-style: null !default;
+$regex-operator-background: null !default;
+$regex-operator-background-opacity: null !default;
+
+$regex-constant: null !default; //: ALL
+$regex-constant-weight: null !default;
+$regex-constant-style: null !default;
+$regex-constant-background: null !default;
+$regex-constant-background-opacity: null !default;
+
+$regex-delimiter: null !default; //: ALL
+$regex-delimiter-weight: null !default;
+$regex-delimiter-style: null !default;
+$regex-delimiter-background: null !default;
+$regex-delimiter-background-opacity: null !default;
+
+$regex-group: null !default; //: ALL
+$regex-group-weight: null !default;
+$regex-group-style: null !default;
+$regex-group-background: null !default;
+$regex-group-background-opacity: null !default;
+
+$regex-noncapturing-group: null !default; //: ALL
+$regex-noncapturing-group-weight: null !default;
+$regex-noncapturing-group-style: null !default;
+$regex-noncapturing-group-background: null !default;
+$regex-noncapturing-group-background-opacity: null !default;
+
+//* Apache
+
+$apache-constant: null !default; //: ALL
+$apache-constant-weight: null !default;
+$apache-constant-style: null !default;
+$apache-constant-background: null !default;
+$apache-constant-background-opacity: null !default;
+
+$apache-keyword: null !default; //: ALL
+$apache-keyword-weight: null !default;
+$apache-keyword-style: null !default;
+$apache-keyword-background: null !default;
+$apache-keyword-background-opacity: null !default;
+
+$apache-tag: null !default; //: ALL
+$apache-tag-weight: null !default;
+$apache-tag-style: null !default;
+$apache-tag-background: null !default;
+$apache-tag-background-opacity: null !default;
+
+$apache-tag-name: null !default; //: ALL
+$apache-tag-name-weight: null !default;
+$apache-tag-name-style: null !default;
+$apache-tag-name-background: null !default;
+$apache-tag-name-background-opacity: null !default;
+
+// =============================================================================
+
+@if $theme-placeholders {
+/*
+	@theme #{$theme-name}
+	@override-placeholders #{$theme-placeholders}
+*/
+} @else {
+/*
+	@theme #{$theme-name}
+*/
+}
+
+@mixin color($color) {
+	@if $color {
+		color: $color;
+	}
+}
+
+@mixin weight($weight) {
+	@if $weight {
+		font-weight: $weight;
+	}
+}
+
+@mixin style($style) {
+	@if $style {
+		font-style: $style;
+	}
+}
+
+@mixin background($color, $opacity: null) {
+	@if $color {
+		@if $opacity {
+			background-color: rgba($color, $opacity);
+		} @else {
+			background-color: $color;
+		}
+	}
+}
+
+@mixin stylize($color, $weight: null, $style: null, $background: null, $background-opacity: null) {
+	@include color($color);
+	@include weight($weight);
+	@include style($style);
+	@include background($background, $background-opacity);
+}
+
+/* @group Global */
+
+:document-base {
+	color: $text;
+	@include background($background, $background-opacity);
+	insertion-point-color: $text;
+	selection-background-color: $selection-background;
+	@if $current-line {
+		@if $current-line-opacity {
+			current-line-background-color: rgba($current-line, $current-line-opacity);
+		} @else {
+			current-line-background-color: $current-line;
+		}
+	}
+}
+
+apache, css, js, php, python, regex, ruby, tag {
+	spell-check: disabled;
+}
+
+punctuation {
+	@include stylize($punctuation, $punctuation-weight, $punctuation-style, $punctuation-background, $punctuation-background-opacity);
+}
+
+operator {
+	@include stylize($operator, $operator-weight, $operator-style, $operator-background, $operator-background-opacity);
+}
+
+comment {
+	@include stylize($comment, $comment-weight, $comment-style, $comment-background, $comment-background-opacity);
+	
+	& > punctuation {
+		@if $comment-punctuation {
+			@include stylize($comment-punctuation, $comment-punctuation-weight, $comment-punctuation-style, $comment-punctuation-background, $comment-punctuation-background-opacity);
+		} @else {
+			@include stylize($comment, $comment-punctuation-weight, $comment-punctuation-style, $comment-punctuation-background, $comment-punctuation-background-opacity);
+		}
+	}
+	
+	keyword {
+		@if $comment-keyword {
+			color: $comment-keyword;
+		} @else {
+			color: $comment;
+		}
+		@include weight($comment-keyword-weight);
+		@include style($comment-keyword-style);
+		@include background($comment-keyword-background, $comment-keyword-background-opacity);
+	}
+}
+
+string {
+	@include stylize($string, $string-weight, $string-style, $string-background, $string-background-opacity);
+	
+	& > punctuation {
+		@if $string-punctuation {
+			@include stylize($string-punctuation, $string-punctuation-weight, $string-punctuation-style, $string-punctuation-background, $string-punctuation-background-opacity);
+		} @else {
+			@include stylize($string, $string-punctuation-weight, $string-punctuation-style, $string-punctuation-background, $string-punctuation-background-opacity);
+		}
+	}
+	
+	& > escape {
+		@include stylize($character-escape, $character-escape-weight, $character-escape-style, $character-escape-background, $character-escape-background-opacity);
+	}
+}
+
+variable {
+	@include stylize($variable, $variable-weight, $variable-style, $variable-background, $variable-background-opacity);
+	
+	& > punctuation {
+		@if $variable-punctuation {
+			@include stylize($variable-punctuation, $variable-punctuation-weight, $variable-punctuation-style, $variable-punctuation-background, $variable-punctuation-background-opacity);
+		} @else {
+			@include stylize($variable, $variable-punctuation-weight, $variable-punctuation-style, $variable-punctuation-background, $variable-punctuation-background-opacity);
+		}
+	}
+}
+
+keyword {
+	@include stylize($keyword, $keyword-weight, $keyword-style, $keyword-background, $keyword-background-opacity);
+}
+
+// The "constant" zone is used in some unexpected places across syntaxes, so we need to target numbers and language constants explicitly
+constant.numeric, constant.language {
+	@include stylize($constant, $constant-weight, $constant-style, $constant-background, $constant-background-opacity);
+}
+
+function.definition name, class.definition name, module.definition name {
+	@include stylize($function, $function-weight, $function-style, $function-background, $function-background-opacity);
+}
+
+// PHP includes some "function.keyword" zones for things like array and print, which can be used as either a keyword or a function; CSS colors the whole shebang instead of just the function name, so have to target for that
+function:not(keyword, definition, css), function.css > name {
+	@if $function-call {
+		color: $function-call;
+	} @else {
+		color: $function;
+	}
+	@include weight($function-call-weight);
+	@include style($function-call-style);
+	@include background($function-call-background, $function-call-background-opacity);
+}
+
+invalid {
+	@include stylize($invalid, $invalid-weight, $invalid-style, $invalid-background, $invalid-background-opacity);
+}
+
+/* @end */
+
+/* @group Markup */
+
+tag {
+	@include stylize($tag, $tag-weight, $tag-style, $tag-background, $tag-background-opacity);
+	
+	& > name {
+		@include stylize($tag-name, $tag-name-weight, $tag-name-style, $tag-name-background, $tag-name-background-opacity);
+	}
+	
+	string {
+		@include stylize($tag-string, $tag-string-weight, $tag-string-style, $tag-string-background, $tag-string-background-opacity);
+		
+		& > punctuation {
+			@include stylize($tag-string-punctuation, $tag-string-punctuation-weight, $tag-string-punctuation-style, $tag-string-punctuation-background, $tag-string-punctuation-background-opacity);
+		}
+	}
+}
+
+attribute-name {
+	@include stylize($tag-attribute, $tag-attribute-weight, $tag-attribute-style, $tag-attribute-background, $tag-attribute-background-opacity);
+}
+
+tag.doctype, tag.doctype > *, tag.doctype > string.quoted {
+	color: $comment;
+}
+
+html {
+	entity.character {
+		@include stylize($html-entity, $html-entity-weight, $html-entity-style, $html-entity-background, $html-entity-background-opacity);
+	}
+	
+	comment.conditional {
+		color: $text;
+		
+		& > punctuation.definition, & > conditional.start, & > conditional.end {
+			color: $comment;
+		}
+	}
+}
+
+js.embedded {
+	@include color($embedded-javascript);
+	@include background($embedded-javascript-background, $embedded-javascript-background-opacity);
+}
+
+css.embedded {
+	@include color($embedded-css);
+	@include background($embedded-css-background, $embedded-css-background-opacity);
+}
+
+php.embedded {
+	@include color($embedded-php);
+	@include background($embedded-php-background, $embedded-php-background-opacity);
+}
+
+ruby.embedded {
+	@include color($embedded-ruby);
+	@include background($embedded-ruby-background, $embedded-ruby-background-opacity);
+}
+
+/* @end */
+
+/* @group Styling */
+
+selector {
+	@include stylize($selector, $selector-weight, $selector-style, $selector-background, $selector-background-opacity);
+}
+
+property-name {
+	@include stylize($property-name, $property-name-weight, $property-name-style, $property-name-background, $property-name-background-opacity);
+}
+
+property-value, variable-value {
+	@include stylize($property-value, $property-value-weight, $property-value-style, $property-value-background, $property-value-background-opacity);
+	
+	& > punctuation {
+		color: $text;
+	}
+	
+	@if $monotone-property-values {
+		& > keyword, & > constant.numeric {
+			@include stylize($property-value, $property-value-weight, $property-value-style, $property-value-background, $property-value-background-opacity);
+		}
+	}
+}
+
+// CSS pre-processors include "css" in their IDs, so this applies to SCSS and LESS, as well
+css {
+	punctuation {
+		@include stylize($css-punctuation, $css-punctuation-weight, $css-punctuation-style, $css-punctuation-background, $css-punctuation-background-opacity);
+	}
+	
+	string {
+		@include stylize($css-string, $css-string-weight, $css-string-style, $css-string-background, $css-string-background-opacity);
+		& > punctuation {
+			@include stylize($css-string-punctuation, $css-string-punctuation-weight, $css-string-punctuation-style, $css-string-punctuation-background, $css-string-punctuation-background-opacity);
+		}
+	}
+	
+	variable {
+		@include stylize($css-variable, $css-variable-weight, $css-variable-style, $css-variable-background, $css-variable-background-opacity);
+		& > punctuation {
+			@include stylize($css-variable-punctuation, $css-variable-punctuation-weight, $css-variable-punctuation-style, $css-variable-punctuation-background, $css-variable-punctuation-background-opacity);
+		}
+	}
+	
+	keyword {
+		@include stylize($css-keyword, $css-keyword-weight, $css-keyword-style, $css-keyword-background, $css-keyword-background-opacity);
+	}
+	
+	constant.numeric {
+		@include stylize($css-constant, $css-constant-weight, $css-constant-style, $css-constant-background, $css-constant-background-opacity);
+	}
+	
+	function {
+		// CSS is unique in its use of the function keyword; it applies to the whole thing, so we need to explicitly target the name and punctuation zones
+		& > name {
+			@include stylize($css-function, $css-function-weight, $css-function-style, $css-function-background, $css-function-background-opacity);
+		}
+		
+		& > punctuation {
+			@include stylize($css-function-punctuation, $css-function-punctuation-weight, $css-function-punctuation-style, $css-function-punctuation-background, $css-function-punctuation-background-opacity);
+		}
+		
+		@if $monotone-property-values {
+			& > keyword, & > constant.numeric {
+				@include stylize($property-value, $property-value-weight, $property-value-style, $property-value-background, $property-value-background-opacity);
+			}
+		}
+	}
+}
+
+/*media > block > punctuation, property-list > property-value > punctuation {
+	@include stylize($css-block-punctuation, $css-block-punctuation-weight, $css-block-punctuation-style, $css-block-punctuation-background, $css-block-punctuation-background-opacity);
+}*/
+
+keyword.important {
+	font-weight: bold;
+}
+
+/* @end */
+
+/* @group Markdown */
+
+markdown {
+	bold {
+		font-weight: bold;
+	}
+	
+	italic {
+		font-style: italic;
+	}
+	
+	bold italic, italic bold {
+		font-weight: bold;
+		font-style: italic;
+	}
+	
+	header {
+		@include stylize($markdown-header, $markdown-header-weight, $markdown-header-style, $markdown-header-background, $markdown-header-background-opacity);
+	}
+	
+	link, image {
+		@include stylize($markdown-link, $markdown-link-weight, $markdown-link-style, $markdown-link-background, $markdown-link-background-opacity);
+	}
+	
+	url, email {
+		@include stylize($markdown-url, $markdown-url-weight, $markdown-url-style, $markdown-url-background, $markdown-url-background-opacity);
+		spell-check: disabled;
+	}
+	
+	link keyword.reference {
+		@include stylize($markdown-reference, $markdown-reference-weight, $markdown-reference-style, $markdown-reference-background, $markdown-reference-background-opacity);
+	}
+	
+	punctuation:not(attribute) {
+		@include stylize($markdown-punctuation, $markdown-punctuation-weight, $markdown-punctuation-style, $markdown-punctuation-background, $markdown-punctuation-background-opacity);
+	}
+	
+	// And correct for HTML and comment punctuation, because catch-alls don't work too well
+	html > punctuation {
+		@include stylize($tag, $tag-weight, $tag-style, $tag-background, $tag-background-opacity);
+	}
+	
+	comment > punctuation {
+		@include stylize($comment-punctuation, $comment-punctuation-weight, $comment-punctuation-style, $comment-punctuation-background, $comment-punctuation-background-opacity);
+	}
+	
+	separator:not(attribute) {
+		@include stylize($markdown-separator, $markdown-separator-weight, $markdown-separator-style, $markdown-separator-background, $markdown-separator-background-opacity);
+	}
+	
+	code {
+		@include stylize($markdown-code, $markdown-code-weight, $markdown-code-style, $markdown-code-background, $markdown-code-background-opacity);
+	}
+	
+	code > punctuation, constant.character.escape {
+		@include stylize($markdown-code-punctuation, $markdown-code-punctuation-weight, $markdown-code-punctuation-style, $markdown-code-punctuation-background, $markdown-code-punctuation-background-opacity);
+	}
+}
+
+/* @end */
+
+/* @group Javascript */
+
+js {
+	punctuation {
+		@include stylize($js-punctuation, $js-punctuation-weight, $js-punctuation-style, $js-punctuation-background, $js-punctuation-background-opacity);
+	}
+	
+	operator {
+		@include stylize($js-operator, $js-operator-weight, $js-operator-style, $js-operator-background, $js-operator-background-opacity);
+	}
+	
+	string {
+		@include stylize($js-string, $js-string-weight, $js-string-style, $js-string-background, $js-string-background-opacity);
+		
+		& > punctuation {
+			@include stylize($js-string-punctuation, $js-string-punctuation-weight, $js-string-punctuation-style, $js-string-punctuation-background, $js-string-punctuation-background-opacity);
+		}
+		
+		& > escape {
+			@include stylize($js-character-escape, $js-character-escape-weight, $js-character-escape-style, $js-character-escape-background, $js-character-escape-background-opacity);
+		}
+	}
+	
+	keyword {
+		@include stylize($js-keyword, $js-keyword-weight, $js-keyword-style, $js-keyword-background, $js-keyword-background-opacity);
+	}
+	
+	constant.numeric, constant.language {
+		@include stylize($js-constant, $js-constant-weight, $js-constant-style, $js-constant-background, $js-constant-background-opacity);
+	}
+	
+	function.definition name {
+		@include stylize($js-function, $js-function-weight, $js-function-style, $js-function-background, $js-function-background-opacity);
+	}
+	
+	function:not(keyword) {
+		@include stylize($js-function-call, $js-function-call-weight, $js-function-call-style, $js-function-call-background, $js-function-call-background-opacity);
+	}
+}
+
+/* @end */
+
+/* @group PHP */
+
+php {
+	delimiter.source, delimiter.source keyword {
+		@include stylize($php-delimiter, $php-delimiter-weight, $php-delimiter-style, $php-delimiter-background, $php-delimiter-background-opacity);
+	}
+	
+	punctuation {
+		@include stylize($php-punctuation, $php-punctuation-weight, $php-punctuation-style, $php-punctuation-background, $php-punctuation-background-opacity);
+	}
+	
+	operator {
+		@include stylize($php-operator, $php-operator-weight, $php-operator-style, $php-operator-background, $php-operator-background-opacity);
+	}
+	
+	string {
+		@include stylize($php-string, $php-string-weight, $php-string-style, $php-string-background, $php-string-background-opacity);
+		
+		& > punctuation {
+			@include stylize($php-string-punctuation, $php-string-punctuation-weight, $php-string-punctuation-style, $php-string-punctuation-background, $php-string-punctuation-background-opacity);
+		}
+		
+		& > escape {
+			@include stylize($php-character-escape, $php-character-escape-weight, $php-character-escape-style, $php-character-escape-background, $php-character-escape-background-opacity);
+		}
+	}
+	
+	variable {
+		@include stylize($php-variable, $php-variable-weight, $php-variable-style, $php-variable-background, $php-variable-background-opacity);
+		
+		& > punctuation {
+			@include stylize($php-variable-punctuation, $php-variable-punctuation-weight, $php-variable-punctuation-style, $php-variable-punctuation-background, $php-variable-punctuation-background-opacity);
+		}
+	}
+	
+	keyword {
+		@include stylize($php-keyword, $php-keyword-weight, $php-keyword-style, $php-keyword-background, $php-keyword-background-opacity);
+	}
+	
+	constant.numeric, constant.language {
+		@include stylize($php-constant, $php-constant-weight, $php-constant-style, $php-constant-background, $php-constant-background-opacity);
+	}
+	
+	function.definition name, class.definition name {
+		@include stylize($php-function, $php-function-weight, $php-function-style, $php-function-background, $php-function-background-opacity);
+	}
+	
+	function:not(keyword) {
+		@include stylize($php-function-call, $php-function-call-weight, $php-function-call-style, $php-function-call-background, $php-function-call-background-opacity);
+	}
+	
+	string x-accessor, keyword.constant {
+		color: $variable;
+	}
+}
+
+/* @end */
+
+/* @group Python */
+
+python {
+	decorator, decorator punctuation {
+		@include stylize($comment, $comment-weight, $comment-style, $comment-background, $comment-background-opacity);
+	}
+	
+	decorator punctuation {
+		@include stylize($comment-punctuation, $comment-punctuation-weight, $comment-punctuation-style, $comment-punctuation-background, $comment-punctuation-background-opacity);
+	}
+	
+	punctuation {
+		@include stylize($python-punctuation, $python-punctuation-weight, $python-punctuation-style, $python-punctuation-background, $python-punctuation-background-opacity);
+	}
+	
+	operator {
+		@include stylize($python-operator, $python-operator-weight, $python-operator-style, $python-operator-background, $python-operator-background-opacity);
+	}
+	
+	string {
+		@include stylize($python-string, $python-string-weight, $python-string-style, $python-string-background, $python-string-background-opacity);
+		
+		& > punctuation {
+			@include stylize($python-string-punctuation, $python-string-punctuation-weight, $python-string-punctuation-style, $python-string-punctuation-background, $python-string-punctuation-background-opacity);
+		}
+		
+		& > escape {
+			@include stylize($python-character-escape, $python-character-escape-weight, $python-character-escape-style, $python-character-escape-background, $python-character-escape-background-opacity);
+		}
+	}
+	
+	variable {
+		@include stylize($python-variable, $python-variable-weight, $python-variable-style, $python-variable-background, $python-variable-background-opacity);
+	}
+	
+	keyword {
+		@include stylize($python-keyword, $python-keyword-weight, $python-keyword-style, $python-keyword-background, $python-keyword-background-opacity);
+	}
+	
+	constant.numeric, constant.language {
+		@include stylize($python-constant, $python-constant-weight, $python-constant-style, $python-constant-background, $python-constant-background-opacity);
+	}
+	
+	function.definition name, class.definition name {
+		@include stylize($python-function, $python-function-weight, $python-function-style, $python-function-background, $python-function-background-opacity);
+	}
+	
+	function:not(keyword) {
+		@include stylize($python-function-call, $python-function-call-weight, $python-function-call-style, $python-function-call-background, $python-function-call-background-opacity);
+	}
+}
+
+/* @end */
+
+/* @group Ruby */
+
+ruby {
+	delimiter.source, delimiter.source > * {
+		@include stylize($ruby-delimiter, $ruby-delimiter-weight, $ruby-delimiter-style, $ruby-delimiter-background, $ruby-delimiter-background-opacity);
+	}
+	
+	punctuation {
+		@include stylize($ruby-punctuation, $ruby-punctuation-weight, $ruby-punctuation-style, $ruby-punctuation-background, $ruby-punctuation-background-opacity);
+	}
+	
+	operator {
+		@include stylize($ruby-operator, $ruby-operator-weight, $ruby-operator-style, $ruby-operator-background, $ruby-operator-background-opacity);
+	}
+	
+	string {
+		@include stylize($ruby-string, $ruby-string-weight, $ruby-string-style, $ruby-string-background, $ruby-string-background-opacity);
+		
+		& > punctuation {
+			@include stylize($ruby-string-punctuation, $ruby-string-punctuation-weight, $ruby-string-punctuation-style, $ruby-string-punctuation-background, $ruby-string-punctuation-background-opacity);
+		}
+		
+		& > escape {
+			@include stylize($ruby-character-escape, $ruby-character-escape-weight, $ruby-character-escape-style, $ruby-character-escape-background, $ruby-character-escape-background-opacity);
+		}
+	}
+	
+	variable {
+		@include stylize($ruby-variable, $ruby-variable-weight, $ruby-variable-style, $ruby-variable-background, $ruby-variable-background-opacity);
+	}
+	
+	keyword {
+		@include stylize($ruby-keyword, $ruby-keyword-weight, $ruby-keyword-style, $ruby-keyword-background, $ruby-keyword-background-opacity);
+	}
+	
+	constant.numeric, constant.language {
+		@include stylize($ruby-constant, $ruby-constant-weight, $ruby-constant-style, $ruby-constant-background, $ruby-constant-background-opacity);
+	}
+	
+	function.definition name, class.definition name, module.definition name {
+		@include stylize($ruby-function, $ruby-function-weight, $ruby-function-style, $ruby-function-background, $ruby-function-background-opacity);
+	}
+	
+	function:not(keyword) {
+		@include stylize($ruby-function-call, $ruby-function-call-weight, $ruby-function-call-style, $ruby-function-call-background, $ruby-function-call-background-opacity);
+	}
+}
+
+/* @end */
+
+/* @group Regex */
+
+regex {
+	@include stylize($regex, $regex-weight, $regex-style, $regex-background, $regex-background-opacity);
+	
+	punctuation {
+		@include stylize($regex-punctuation, $regex-punctuation-weight, $regex-punctuation-style, $regex-punctuation-background, $regex-punctuation-background-opacity);
+	}
+	
+	operator {
+		@include stylize($regex-operator, $regex-operator-weight, $regex-operator-style, $regex-operator-background, $regex-operator-background-opacity);
+	}
+	
+	constant {
+		@include stylize($regex-constant, $regex-constant-weight, $regex-constant-style, $regex-constant-background, $regex-constant-background-opacity);
+	}
+	
+	&.literal > punctuation.definition, regex.flags {
+		@include stylize($regex-delimiter, $regex-delimiter-weight, $regex-delimiter-style, $regex-delimiter-background, $regex-delimiter-background-opacity);
+	}
+	
+	group {
+		@include background($regex-group-background, $regex-group-background-opacity);
+		
+		& > punctuation {
+			@include color($regex-group);
+			@include weight($regex-group-weight);
+			@include style($regex-group-style);
+		}
+	}
+	
+	group.noncapturing {
+		@include background($regex-noncapturing-group-background, $regex-noncapturing-group-background-opacity);
+		
+		& > punctuation, options {
+			@include color($regex-noncapturing-group);
+			@include weight($regex-noncapturing-group-weight);
+			@include style($regex-noncapturing-group-style);
+		}
+	}
+}
+
+/* @end */
+
+/* @group Apache */
+
+apache {
+	keyword {
+		@include stylize($apache-keyword, $apache-keyword-weight, $apache-keyword-style, $apache-keyword-background, $apache-keyword-background-opacity);
+	}
+	
+	constant {
+		@include stylize($apache-constant, $apache-constant-weight, $apache-constant-style, $apache-constant-background, $apache-constant-background-opacity);
+	}
+	
+	tag {
+		@include stylize($apache-tag, $apache-tag-weight, $apache-tag-style, $apache-tag-background, $apache-tag-background-opacity);
+		
+		& > name {
+			@include stylize($apache-tag-name, $apache-tag-name-weight, $apache-tag-name-style, $apache-tag-name-background, $apache-tag-name-background-opacity);
+		}
+	}
+}
+
+/* @end */

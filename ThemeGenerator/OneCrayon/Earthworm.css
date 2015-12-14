@@ -1,0 +1,234 @@
+/*
+	@theme Earthworm
+	@override-placeholders ee, coldfusion, as3
+*/
+/* @group Global */
+:document-base {
+  color: #fff;
+  background-color: #333;
+  insertion-point-color: #fff;
+  selection-background-color: #544e44; }
+
+apache, css, js, php, python, regex, ruby, tag {
+  spell-check: disabled; }
+
+comment {
+  color: #764; }
+  comment > punctuation {
+    color: #764; }
+  comment keyword {
+    color: #764;
+    font-weight: bold; }
+
+string {
+  color: #abc837; }
+  string > punctuation {
+    color: #abc837; }
+
+variable {
+  color: #cdde87; }
+  variable > punctuation {
+    color: #cdde87; }
+
+keyword {
+  color: #e8bf6a; }
+
+constant.numeric, constant.language {
+  color: #e8bf6a; }
+
+function.definition name, class.definition name, module.definition name {
+  color: #ee0f04; }
+
+function:not(keyword, definition, css), function.css > name {
+  color: #ee0f04; }
+
+invalid {
+  color: #600;
+  background-color: rgba(150, 0, 0, 0.8); }
+
+/* @end */
+/* @group Markup */
+tag {
+  color: #e8bf6a; }
+
+tag.doctype, tag.doctype > *, tag.doctype > string.quoted {
+  color: #764; }
+
+html entity.character {
+  color: #cdde87; }
+html comment.conditional {
+  color: #fff; }
+  html comment.conditional > punctuation.definition, html comment.conditional > conditional.start, html comment.conditional > conditional.end {
+    color: #764; }
+
+js.embedded {
+  background-color: #24211d; }
+
+css.embedded {
+  background-color: #24211d; }
+
+php.embedded {
+  background-color: #1a1a1a; }
+
+ruby.embedded {
+  background-color: #1a1a1a; }
+
+/* @end */
+/* @group Styling */
+selector {
+  color: #cdde87; }
+
+property-name {
+  color: #e8bf6a; }
+
+property-value, variable-value {
+  color: #abc837; }
+  property-value > punctuation, variable-value > punctuation {
+    color: #fff; }
+  property-value > keyword, property-value > constant.numeric, variable-value > keyword, variable-value > constant.numeric {
+    color: #abc837; }
+
+css function > keyword, css function > constant.numeric {
+  color: #abc837; }
+
+/*media > block > punctuation, property-list > property-value > punctuation {
+	@include stylize($css-block-punctuation, $css-block-punctuation-weight, $css-block-punctuation-style, $css-block-punctuation-background, $css-block-punctuation-background-opacity);
+}*/
+keyword.important {
+  font-weight: bold; }
+
+/* @end */
+/* @group Markdown */
+markdown bold {
+  font-weight: bold; }
+markdown italic {
+  font-style: italic; }
+markdown bold italic, markdown italic bold {
+  font-weight: bold;
+  font-style: italic; }
+markdown header {
+  font-weight: bold; }
+markdown link, markdown image {
+  color: #e8bf6a; }
+markdown url, markdown email {
+  color: #abc837;
+  spell-check: disabled; }
+markdown link keyword.reference {
+  color: #abc837; }
+markdown punctuation:not(attribute) {
+  color: #cdde87; }
+markdown html > punctuation {
+  color: #e8bf6a; }
+markdown separator:not(attribute) {
+  color: #cdde87; }
+markdown code {
+  color: #abc837; }
+markdown code > punctuation, markdown constant.character.escape {
+  color: #cdde87; }
+
+/* @end */
+/* @group Javascript */
+js constant.numeric, js constant.language {
+  color: #cdde87; }
+
+/* @end */
+/* @group PHP */
+php delimiter.source, php delimiter.source keyword {
+  color: #fff; }
+php string x-accessor, php keyword.constant {
+  color: #cdde87; }
+
+/* @end */
+/* @group Python */
+python decorator, python decorator punctuation {
+  color: #764; }
+
+/* @end */
+/* @group Ruby */
+ruby delimiter.source, ruby delimiter.source > * {
+  color: #fff; }
+
+/* @end */
+/* @group Regex */
+regex punctuation {
+  color: #cdde87; }
+regex operator {
+  color: #cdde87; }
+regex constant {
+  color: #cdde87; }
+regex.literal > punctuation.definition, regex regex.flags {
+  color: #abc837; }
+regex group > punctuation {
+  color: #e8bf6a; }
+
+/* @end */
+/* @group Apache */
+apache keyword {
+  color: #cdde87; }
+apache tag {
+  color: #e8bf6a; }
+  apache tag > name {
+    color: #e8bf6a; }
+
+/* @end */
+css group-start name {
+  font-weight: bold; }
+
+js keyword.language {
+  color: #cdde87; }
+js class.constructor > class {
+  color: #ee0f04; }
+
+php variable.keyword {
+  font-weight: bold; }
+
+/* @group Third Party */
+/* @group ExpressionEngine */
+ee.tag, ee.operator, ee.attribute-name, ee ee.tag > ee.name, ee ee.tag > ee.punctuation, ee ee.tag.conditional, ee ee.tag ee.attribute-name {
+  color: #cdde87; }
+
+ee ee.tag ee.attribute-name {
+  font-weight: normal; }
+
+ee ee.tag.self-closing.conditional {
+  background: #333; }
+
+ee.attribute, ee ee.tag ee.attribute {
+  color: #abc837; }
+
+/* @end */
+/* @group Actionscript */
+as3 keyword.as3, as3 keyword.bool {
+  color: #e8bf6a; }
+
+as3 keyword.function.as3 {
+  color: #ee0f04; }
+
+as3 method name, as3 keyword.operators.as3 {
+  color: #fff; }
+
+as3 integral.value {
+  background: #333; }
+
+as3 keyword.class.as3 {
+  color: #cdde87; }
+
+/* @end */
+/* @group ColdFusion */
+cfm.tag {
+  color: #cdde87; }
+
+cfm operator, cfm keyword {
+  color: #e8bf6a; }
+
+cfml.embedded output {
+  color: #fff; }
+
+cfml.embedded coldfusion.embedded {
+  color: #e8bf6a; }
+
+function.cfm > parenthesis {
+  color: #cdde87; }
+
+/* @end */
+/* @end */

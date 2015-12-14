@@ -1,0 +1,184 @@
+//* Theme settings
+
+$theme-name: "Earthworm";
+$theme-placeholders: "ee, coldfusion, as3";
+
+//* CUSTOM
+
+$embedded-background: #24211d;
+
+//* Base
+
+$text: #fff;
+$background: #333;
+$selection-background: #544e44;
+
+$embedded-javascript-background: $embedded-background;
+$embedded-css-background: $embedded-background;
+$embedded-php-background: #1a1a1a;
+$embedded-ruby-background: $embedded-php-background;
+
+$monotone-property-values: true;
+
+//* Common
+
+$comment: #764;
+$string: #abc837;
+$variable: #cdde87;
+$keyword: #e8bf6a;
+$constant: $keyword;
+$function: #ee0f04;
+
+$comment-keyword-weight: bold;
+
+$invalid: #600;
+$invalid-background: #960000;
+$invalid-background-opacity: .8;
+
+//* HTML
+
+$tag: $keyword;
+$html-entity: $variable;
+
+//* CSS
+
+$selector: $variable;
+$property-name: $keyword;
+$property-value: $string;
+
+//* Javascript
+
+$js-constant: $variable;
+
+//* PHP
+
+$php-delimiter: $text;
+
+//* Ruby
+
+$ruby-delimiter: $text;
+
+//* Regex
+
+$regex-punctuation: $variable;
+$regex-operator: $variable;
+$regex-constant: $variable;
+$regex-delimiter: $string;
+$regex-group: $keyword;
+
+//* Markdown
+
+$markdown-punctuation: $variable;
+$markdown-separator: $variable;
+$markdown-header-weight: bold;
+$markdown-link: $keyword;
+$markdown-url: $string;
+$markdown-reference: $string;
+$markdown-code: $string;
+$markdown-code-punctuation: $variable;
+
+//* Apache
+
+$apache-keyword: $variable;
+$apache-tag: $constant;
+$apache-tag-name: $constant;
+
+@import "../_base";
+
+// =========================================================================
+
+css {
+	group-start name {
+		font-weight: bold;
+	}
+}
+
+js {
+	keyword.language {
+		color: $variable;
+	}
+	
+	class.constructor > class {
+		color: $function;
+	}
+}
+
+php {
+	variable.keyword {
+		font-weight: bold;
+	}
+}
+
+/* @group Third Party */
+
+/* @group ExpressionEngine */
+
+ee.tag, ee.operator, ee.attribute-name,
+ee ee.tag > ee.name, ee ee.tag > ee.punctuation, ee ee.tag.conditional,
+ee ee.tag ee.attribute-name {
+	color: $variable;
+}
+
+ee ee.tag ee.attribute-name {
+	font-weight: normal;
+}
+
+ee ee.tag.self-closing.conditional {
+	background: $background;
+}
+
+ee.attribute, ee ee.tag ee.attribute {
+	color: $string;
+}
+
+/* @end */
+
+/* @group Actionscript */
+
+as3 keyword.as3, as3 keyword.bool {
+	color: $keyword;
+}
+
+as3 keyword.function.as3 {
+	color: $function;
+}
+
+as3 method name, as3 keyword.operators.as3 {
+	color: $text;
+}
+
+as3 integral.value {
+	background: $background;
+}
+
+as3 keyword.class.as3 {
+	color: $variable;
+}
+
+/* @end */
+
+/* @group ColdFusion */
+
+cfm.tag {
+	color: $variable;
+}
+
+cfm operator, cfm keyword {
+	color: $keyword;
+}
+
+cfml.embedded output {
+	color: $text;
+}
+
+cfml.embedded coldfusion.embedded {
+	color: $keyword
+}
+
+function.cfm > parenthesis {
+	color: $variable;
+}
+
+/* @end */
+
+/* @end */

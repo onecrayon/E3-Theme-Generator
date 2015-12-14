@@ -1,0 +1,398 @@
+$theme-name: "Quiet Light";
+$theme-placeholders: "ee, haskell, bash, objective-c, as3, coldfusion";
+
+//* CUSTOM
+
+$string-light: #91b583;
+$string-muted: #d3e1cd;
+$variable-light: #b19bbd;
+$function-light: #ddb0ad;
+
+//* Common
+
+$text: #333;
+$background: #f5f5f5;
+
+$operator: #777;
+
+$comment: #aaa;
+$comment-keyword-weight: bold;
+
+$string: #448c27;
+
+$variable: #7a3e9d;
+
+$keyword: #4b83cd;
+
+$constant: #ab6526;
+
+$function: #aa3731;
+$function-weight: bold;
+
+$invalid: #600;
+$invalid-background: #960000;
+$invalid-background-opacity: .8;
+
+//* HTML
+
+$tag: #91b3e0;
+$tag-name: $keyword;
+$html-entity: $constant;
+
+$embedded-javascript-background: #eaebe6;
+$embedded-css-background: #efe8f3;
+$embedded-php-background: #e6ebf2;
+$embedded-ruby-background: $embedded-php-background;
+
+//* CSS
+
+$selector: $variable;
+$property-name: $constant;
+$property-value: $string;
+
+$monotone-property-values: true;
+
+$css-variable: $function;
+$css-variable-punctuation: $function-light;
+
+//* Javascript
+
+$js-punctuation: $operator;
+$js-character-escape: $constant;
+
+//* PHP
+
+$php-delimiter: $function;
+$php-delimiter-weight: bold;
+
+//* Python
+
+$python-punctuation: $operator;
+$python-variable: $text;
+
+//* Regex
+
+$regex-punctuation: $variable;
+$regex-operator: $variable-light;
+$regex-constant: $constant;
+$regex-group: $variable;
+$regex-noncapturing-group: $variable-light;
+
+//* Markdown
+
+$markdown-punctuation: $string;
+$markdown-separator: $string;
+$markdown-separator-background: $string-muted;
+
+$markdown-header-weight: bold;
+$markdown-link: $variable;
+$markdown-url: $keyword;
+$markdown-reference: $constant;
+$markdown-code: $operator;
+
+//* Apache
+
+$apache-tag: $function-light;
+$apache-tag-name: $function;
+$apache-keyword: $keyword;
+
+@import "../_base";
+
+// ========== Custom styling ==========
+
+bash {
+	spell-check: disabled;
+}
+
+/* Deprecated HTML elements */
+entity.name[text='applet'],
+entity.name[text='basefont'],
+entity.name[text='center'],
+entity.name[text='dir'],
+entity.name[text='font'],
+entity.name[text='isindex'],
+entity.name[text='menu'],
+entity.name[text='s'],
+entity.name[text='strike'],
+entity.name[text='u'] {
+	@include background($invalid-background, $invalid-background-opacity);
+}
+
+css {
+	group-start, group-end {
+		color: $string;
+	}
+	
+	group-start name {
+		font-weight: bold;
+	}
+	
+	keyword.control punctuation {
+		color: $tag;
+	}
+	
+	property-value keyword, variable-value keyword {
+		color: $property-value;
+	}
+}
+
+js {
+	variable {
+		color: $text;
+	}
+	
+	variable.language {
+		color: $constant;
+	}
+	
+	storage.type, keyword.new {
+		color: $variable;
+	}
+	
+	class.constructor > class {
+		color: $text;
+		font-weight: bold;
+	}
+	
+	function.definition > string > name {
+		color: $string;
+	}
+	
+	function.definition > accessor-path > variable {
+		color: $function;
+	}
+}
+
+php {
+	keyword.variable, keyword.variable.language {
+		color: $variable;
+		font-weight: bold;
+	}
+	
+	constant:not(numeric, language, character) {
+		color: $text;
+	}
+}
+
+python {
+	variable.language {
+		color: $variable;
+	}
+}
+
+markdown {
+	hard-break {
+		background: $string-muted;
+	}
+	
+	// TODO: figure out why this isn't working; seems to be a bug in Espresso, not a problem with the theme (since adding `font-style: italic;` makes the stuff italic and not bold, although the font supports bold + italics at the same time)
+	header comment > punctuation, header tag {
+		font-weight: normal;
+	}
+}
+
+/* @group One Crayon */
+
+/* @group Espresso snippets */
+
+snippet.variable:not(transformation, placeholder), snippet.variable identifier {
+	color: $function;
+}
+
+snippet.variable.transformation, snippet.variable.placeholder {
+	color: $text;
+}
+
+snippet.variable punctuation, snippet.variable > punctuation.definition.begin, snippet.variable > punctuation.definition.end {
+	color: $function-light;
+}
+
+/* @end */
+
+/* @group Objective-C */
+
+objective-c  {
+	storage.type {
+		color: $function;
+	}
+	
+	keyword.language {
+		color: $variable;
+	}
+	
+	& > punctuation, *:not(string, comment) punctuation {
+		color: $operator;
+	}
+	
+	function.definition name {
+		font-weight: normal;
+		color: $text;
+	}
+	
+	function.definition method-segment {
+		font-weight: bold;
+	}
+}
+
+/* @end */
+
+/* @group Strings Files */
+
+stringsfile string.key {
+	color: $string-light;
+}
+
+/* @end */
+
+/* @end */
+
+/* @group Third Party */
+
+/* @group Bash */
+
+bash {
+	operator, & > punctuation, :not(string, variable, comment) punctuation {
+		color: $operator;
+	}
+}
+
+/* @end */
+
+/* @group ExpressionEngine */
+
+/* This crap cancels out the damned placeholder theme */
+
+ee ee.tag > attribute > attribute-name  {
+	color: $variable-light;
+	font-weight: normal;
+}
+
+ee ee.tag > attribute { 
+	color: $constant;
+}
+
+ee > ee.tag.self-closing.conditional {
+	background: $background;
+}
+
+ee > ee.tag.self-closing,
+ee > ee.tag.self-closing > name, 
+ee > ee.tag.self-closing > punctuation, 
+ee > ee.tag.self-closing attribute-name {
+	color: $variable;
+}
+
+ee > ee.tag.self-closing > punctuation.definition {
+	color: $variable-light;
+}
+
+/* end of the placeholder killer crap */
+
+ee.tag, ee ee.tag > ee.attribute-name, ee.operator,
+ee ee.tag > ee.punctuation.definition {
+	color: $variable-light;
+}
+
+ee.attribute {
+	color: $constant;
+}
+
+ee ee.tag > ee.entity.name, ee ee.tag.conditional, ee ee.tag > name {
+	color: $variable;
+}
+
+/* @end */
+
+/* @group Haskell */
+
+haskell {
+	processing, comment.documentation {
+		color: $comment;
+		font-style: normal;
+	}
+	
+	identifier.module {
+		color: $function;
+		font-weight: bold;
+	}
+	
+	identifier.type {
+		color: $variable;
+		font-weight: bold;
+	}
+	
+	identifier.function, identifier.operator {
+		color: $text;
+		font-weight: normal;
+	}
+	
+	identifier.variable {
+		color: $variable;
+	}
+}
+
+/* @end */
+
+/* @group AS3 */
+
+as3 {
+	keyword.definition, keyword.control.flow {
+		color: $keyword;
+	}
+	
+	keyword.definition.class, container.method.call > keyword.definition.function {
+		color: $function;
+	}
+	
+	keyword.operators {
+		color: $operator;
+	}
+	
+	container.method.call > name {
+		color: $text;
+	}
+	
+	container.method > name {
+		color: $variable;
+	}
+	
+	literal.keyword, integral.value, numeric.value, literal.numeric, literal.numeric > delimiter {
+		color: $constant;
+	}
+}
+
+/* @end */
+
+/* @group ColdFusion */
+
+cfm.tag, cfm.tag > attribute-name {
+	color: $variable-light;
+}
+
+cfm.tag > name {
+	color:  $variable;
+}
+
+cfm operator, cfm keyword {
+	color: $constant;
+}
+
+cfml.embedded output {
+	color: $text;
+}
+
+cfml.embedded coldfusion.embedded {
+	color: $constant;
+}
+
+cfm function {
+	color: $function;
+}
+
+function.cfm > parenthesis {
+	color: $constant;
+}
+
+/* @end */
+
+/* @end */

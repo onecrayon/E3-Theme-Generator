@@ -1,0 +1,165 @@
+//* ==== Do not support -weight/-style/-background/-background-opacity suffixes ====
+
+//* Theme settings
+
+$theme-name: "Unnamed Theme";
+//$theme-placeholders: "";
+
+//* Base
+
+$text: #000;
+$background: #fff;
+//$background-opacity: .4;
+//$current-line: #000;
+//$current-line-opacity: .4;
+//$selection-background: #ff0;
+
+//$embedded-javascript: #000;
+//$embedded-javascript-background: #fff;
+//$embedded-javascript-background-opacity: .4;
+
+//$embedded-css: #000;
+//$embedded-css-background: #fff;
+//$embedded-css-background-opacity: .4;
+
+//$embedded-php: #000;
+//$embedded-php-background: #fff;
+//$embedded-php-background-opacity: .4;
+
+//$embedded-ruby: #000;
+//$embedded-ruby-background: #fff;
+//$embedded-ruby-background-opacity: .4;
+
+//$monotone-property-values: true;
+
+//* ==== Support -weight/-style/-background/-background-opacity suffixes ====
+
+//* Common
+
+$comment: #000;
+$string: #000;
+$variable: #000;
+$keyword: #000;
+$constant: #000;
+$function: #000;
+
+//$comment-punctuation: #000;
+//$comment-keyword: #000;
+//$string-punctuation: #000;
+//$character-escape: #000;
+//$variable-punctuation: #000;
+//$function-call: #000;
+//$punctuation: #000;
+//$operator: #000;
+//$invalid: #000;
+
+//* HTML
+
+$tag: #000;
+//$tag-name: #000;
+//$tag-string: #000;
+//$tag-string-punctuation: #000;
+//$tag-attribute: #000;
+//$html-entity: #000;
+
+//* CSS
+
+$selector: #000;
+$property-name: #000;
+$property-value: #000;
+
+//$css-punctuation: #000;
+//$css-string: #000;
+//$css-string-punctuation: #000;
+//$css-variable: #000;
+//$css-variable-punctuation: #000;
+//$css-keyword: #000;
+//$css-constant: #000;
+//$css-function: #000;
+//$css-function-punctuation: #000;
+
+//* Markdown
+
+//$markdown-punctuation: #000;
+//$markdown-separator: #000;
+//$markdown-header: #000;
+//$markdown-link: #000;
+//$markdown-url: #000;
+//$markdown-reference: #000;
+//$markdown-code: #000;
+//$markdown-code-punctuation: #000;
+
+//* Javascript
+
+//$js-punctuation: #000;
+//$js-operator: #000;
+//$js-string: #000;
+//$js-string-punctuation: #000;
+//$js-character-escape: #000;
+//$js-keyword: #000;
+//$js-constant: #000;
+//$js-function: #000;
+//$js-function-call: #000;
+
+//* PHP
+
+//$php-delimiter: #000;
+//$php-punctuation: #000;
+//$php-operator: #000;
+//$php-string: #000;
+//$php-string-punctuation: #000;
+//$php-character-escape: #000;
+//$php-variable: #000;
+//$php-variable-punctuation: #000;
+//$php-keyword: #000;
+//$php-constant: #000;
+//$php-function: #000;
+//$php-function-call: #000;
+
+//* Python
+
+//$python-punctuation: #000;
+//$python-operator: #000;
+//$python-string: #000;
+//$python-string-punctuation: #000;
+//$python-character-escape: #000;
+//$python-variable: #000;
+//$python-keyword: #000;
+//$python-constant: #000;
+//$python-function: #000;
+//$python-function-call: #000;
+
+//* Ruby
+
+//$ruby-delimiter: #000;
+//$ruby-punctuation: #000;
+//$ruby-operator: #000;
+//$ruby-string: #000;
+//$ruby-string-punctuation: #000;
+//$ruby-character-escape: #000;
+//$ruby-variable: #000;
+//$ruby-keyword: #000;
+//$ruby-constant: #000;
+//$ruby-function: #000;
+//$ruby-function-call: #000;
+
+//* Regex
+
+//$regex: #000;
+//$regex-punctuation: #000;
+//$regex-operator: #000;
+//$regex-constant: #000;
+//$regex-delimiter: #000;
+//$regex-group: #000;
+//$regex-noncapturing-group: #000;
+
+//* Apache
+
+//$apache-constant: #000;
+//$apache-keyword: #000;
+//$apache-tag: #000;
+//$apache-tag-name: #000;
+
+@import "_base";
+
+//* ==== Include custom styles to extend or override the base styles here ====
