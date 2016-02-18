@@ -758,7 +758,7 @@ keyword {
 }
 
 // The "constant" zone is used in some unexpected places across syntaxes, so we need to target numbers and language constants explicitly
-constant.numeric, constant.language {
+constant.numeric, constant.language, constant.character.escape, constant.character.escape > punctuation {
 	@include stylize($constant, $constant-weight, $constant-style, $constant-background, $constant-background-opacity);
 }
 
@@ -1014,7 +1014,7 @@ js {
 		@include stylize($js-keyword, $js-keyword-weight, $js-keyword-style, $js-keyword-background, $js-keyword-background-opacity);
 	}
 	
-	constant.numeric, constant.language {
+	constant.numeric, constant.language, constant.character.escape, constant.character.escape > punctuation {
 		@include stylize($js-constant, $js-constant-weight, $js-constant-style, $js-constant-background, $js-constant-background-opacity);
 	}
 	
@@ -1068,7 +1068,7 @@ php {
 		@include stylize($php-keyword, $php-keyword-weight, $php-keyword-style, $php-keyword-background, $php-keyword-background-opacity);
 	}
 	
-	constant.numeric, constant.language {
+	constant.numeric, constant.language, constant.character.escape, constant.character.escape > punctuation {
 		@include stylize($php-constant, $php-constant-weight, $php-constant-style, $php-constant-background, $php-constant-background-opacity);
 	}
 	
@@ -1126,7 +1126,7 @@ python {
 		@include stylize($python-keyword, $python-keyword-weight, $python-keyword-style, $python-keyword-background, $python-keyword-background-opacity);
 	}
 	
-	constant.numeric, constant.language {
+	constant.numeric, constant.language, constant.character.escape, constant.character.escape > punctuation {
 		@include stylize($python-constant, $python-constant-weight, $python-constant-style, $python-constant-background, $python-constant-background-opacity);
 	}
 	
@@ -1176,7 +1176,7 @@ ruby {
 		@include stylize($ruby-keyword, $ruby-keyword-weight, $ruby-keyword-style, $ruby-keyword-background, $ruby-keyword-background-opacity);
 	}
 	
-	constant.numeric, constant.language {
+	constant.numeric, constant.language, constant.character.escape, constant.character.escape > punctuation {
 		@include stylize($ruby-constant, $ruby-constant-weight, $ruby-constant-style, $ruby-constant-background, $ruby-constant-background-opacity);
 	}
 	
@@ -1252,6 +1252,16 @@ apache {
 		& > name {
 			@include stylize($apache-tag-name, $apache-tag-name-weight, $apache-tag-name-style, $apache-tag-name-background, $apache-tag-name-background-opacity);
 		}
+	}
+}
+
+/* @end */
+
+/* @group Snippets */
+
+snippet.variable {
+	default-text {
+		@include stylize($string, $string-weight, $string-style, $string-background, $string-background-opacity);
 	}
 }
 

@@ -31,12 +31,12 @@ string {
 variable {
   color: #7a3e9d; }
   variable > punctuation {
-    color: #7a3e9d; }
+    color: #b19bbd; }
 
 keyword {
   color: #4b83cd; }
 
-constant.numeric, constant.language {
+constant.numeric, constant.language, constant.character.escape, constant.character.escape > punctuation {
   color: #ab6526; }
 
 function.definition name, class.definition name, module.definition name {
@@ -184,6 +184,11 @@ apache tag {
     color: #aa3731; }
 
 /* @end */
+/* @group Snippets */
+snippet.variable default-text {
+  color: #448c27; }
+
+/* @end */
 bash {
   spell-check: disabled; }
 
@@ -229,17 +234,6 @@ markdown header comment > punctuation, markdown header tag {
   font-weight: normal; }
 
 /* @group One Crayon */
-/* @group Espresso snippets */
-snippet.variable:not(transformation, placeholder), snippet.variable identifier {
-  color: #aa3731; }
-
-snippet.variable.transformation, snippet.variable.placeholder {
-  color: #333; }
-
-snippet.variable punctuation, snippet.variable > punctuation.definition.begin, snippet.variable > punctuation.definition.end {
-  color: #ddb0ad; }
-
-/* @end */
 /* @group Objective-C */
 objective-c storage.type {
   color: #aa3731; }

@@ -21,6 +21,7 @@ $comment-keyword-weight: bold;
 $string: #448c27;
 
 $variable: #7a3e9d;
+$variable-punctuation: $variable-light;
 
 $keyword: #4b83cd;
 
@@ -192,22 +193,6 @@ markdown {
 }
 
 /* @group One Crayon */
-
-/* @group Espresso snippets */
-
-snippet.variable:not(transformation, placeholder), snippet.variable identifier {
-	color: $function;
-}
-
-snippet.variable.transformation, snippet.variable.placeholder {
-	color: $text;
-}
-
-snippet.variable punctuation, snippet.variable > punctuation.definition.begin, snippet.variable > punctuation.definition.end {
-	color: $function-light;
-}
-
-/* @end */
 
 /* @group Objective-C */
 

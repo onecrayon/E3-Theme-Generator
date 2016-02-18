@@ -33,7 +33,7 @@ variable {
 keyword {
   color: #e8bf6a; }
 
-constant.numeric, constant.language {
+constant.numeric, constant.language, constant.character.escape, constant.character.escape > punctuation {
   color: #e8bf6a; }
 
 function.definition name, class.definition name, module.definition name {
@@ -128,7 +128,7 @@ markdown code > punctuation, markdown constant.character.escape {
 
 /* @end */
 /* @group Javascript */
-js constant.numeric, js constant.language {
+js constant.numeric, js constant.language, js constant.character.escape, js constant.character.escape > punctuation {
   color: #cdde87; }
 
 /* @end */
@@ -169,6 +169,11 @@ apache tag {
   color: #e8bf6a; }
   apache tag > name {
     color: #e8bf6a; }
+
+/* @end */
+/* @group Snippets */
+snippet.variable default-text {
+  color: #abc837; }
 
 /* @end */
 css group-start name {
