@@ -56,6 +56,7 @@ tag.doctype, tag.doctype > *, tag.doctype > string.quoted {
 
 html entity.character {
   color: #cdde87; }
+
 html comment.conditional {
   color: #fff; }
   html comment.conditional > punctuation.definition, html comment.conditional > conditional.start, html comment.conditional > conditional.end {
@@ -101,28 +102,39 @@ keyword.important {
 /* @group Markdown */
 markdown bold {
   font-weight: bold; }
+
 markdown italic {
   font-style: italic; }
+
 markdown bold italic, markdown italic bold {
   font-weight: bold;
   font-style: italic; }
+
 markdown header {
   font-weight: bold; }
+
 markdown link, markdown image {
   color: #e8bf6a; }
+
 markdown url, markdown email {
   color: #abc837;
   spell-check: disabled; }
+
 markdown link keyword.reference {
   color: #abc837; }
+
 markdown punctuation:not(attribute) {
   color: #cdde87; }
+
 markdown html > punctuation {
   color: #e8bf6a; }
+
 markdown separator:not(attribute) {
   color: #cdde87; }
+
 markdown code {
   color: #abc837; }
+
 markdown code > punctuation, markdown constant.character.escape {
   color: #cdde87; }
 
@@ -135,6 +147,7 @@ js constant.numeric, js constant.language, js constant.character.escape, js cons
 /* @group PHP */
 php delimiter.source, php delimiter.source keyword {
   color: #fff; }
+
 php string x-accessor, php keyword.constant {
   color: #cdde87; }
 
@@ -152,12 +165,16 @@ ruby delimiter.source, ruby delimiter.source > * {
 /* @group Regex */
 regex punctuation {
   color: #cdde87; }
+
 regex operator {
   color: #cdde87; }
+
 regex constant {
   color: #cdde87; }
+
 regex.literal > punctuation.definition, regex regex.flags {
   color: #abc837; }
+
 regex group > punctuation {
   color: #e8bf6a; }
 
@@ -165,6 +182,7 @@ regex group > punctuation {
 /* @group Apache */
 apache keyword {
   color: #cdde87; }
+
 apache tag {
   color: #e8bf6a; }
   apache tag > name {
@@ -181,6 +199,7 @@ css group-start name {
 
 js keyword.language {
   color: #cdde87; }
+
 js class.constructor > class {
   color: #ee0f04; }
 
@@ -189,7 +208,9 @@ php variable.keyword {
 
 /* @group Third Party */
 /* @group ExpressionEngine */
-ee.tag, ee.operator, ee.attribute-name, ee ee.tag > ee.name, ee ee.tag > ee.punctuation, ee ee.tag.conditional, ee ee.tag ee.attribute-name {
+ee.tag, ee.operator, ee.attribute-name,
+ee ee.tag > ee.name, ee ee.tag > ee.punctuation, ee ee.tag.conditional,
+ee ee.tag ee.attribute-name {
   color: #cdde87; }
 
 ee ee.tag ee.attribute-name {

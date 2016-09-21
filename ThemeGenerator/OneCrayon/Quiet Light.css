@@ -62,6 +62,7 @@ tag.doctype, tag.doctype > *, tag.doctype > string.quoted {
 
 html entity.character {
   color: #ab6526; }
+
 html comment.conditional {
   color: #333; }
   html comment.conditional > punctuation.definition, html comment.conditional > conditional.start, html comment.conditional > conditional.end {
@@ -98,6 +99,7 @@ css variable {
   color: #aa3731; }
   css variable > punctuation {
     color: #ddb0ad; }
+
 css function > keyword, css function > constant.numeric {
   color: #448c27; }
 
@@ -111,27 +113,37 @@ keyword.important {
 /* @group Markdown */
 markdown bold {
   font-weight: bold; }
+
 markdown italic {
   font-style: italic; }
+
 markdown bold italic, markdown italic bold {
   font-weight: bold;
   font-style: italic; }
+
 markdown header {
   font-weight: bold; }
+
 markdown link, markdown image {
   color: #7a3e9d; }
+
 markdown url, markdown email {
   color: #4b83cd;
   spell-check: disabled; }
+
 markdown link keyword.reference {
   color: #ab6526; }
+
 markdown punctuation:not(attribute) {
   color: #448c27; }
+
 markdown html > punctuation {
   color: #91b3e0; }
+
 markdown separator:not(attribute) {
   color: #448c27;
   background-color: #d3e1cd; }
+
 markdown code {
   color: #777; }
 
@@ -139,6 +151,7 @@ markdown code {
 /* @group Javascript */
 js punctuation {
   color: #777; }
+
 js string > escape {
   color: #ab6526; }
 
@@ -147,6 +160,7 @@ js string > escape {
 php delimiter.source, php delimiter.source keyword {
   color: #aa3731;
   font-weight: bold; }
+
 php string x-accessor, php keyword.constant {
   color: #7a3e9d; }
 
@@ -154,8 +168,10 @@ php string x-accessor, php keyword.constant {
 /* @group Python */
 python decorator, python decorator punctuation {
   color: #aaa; }
+
 python punctuation {
   color: #777; }
+
 python variable {
   color: #333; }
 
@@ -165,12 +181,16 @@ python variable {
 /* @group Regex */
 regex punctuation {
   color: #7a3e9d; }
+
 regex operator {
   color: #b19bbd; }
+
 regex constant {
   color: #ab6526; }
+
 regex group > punctuation {
   color: #7a3e9d; }
+
 regex group.noncapturing > punctuation, regex group.noncapturing options {
   color: #b19bbd; }
 
@@ -178,6 +198,7 @@ regex group.noncapturing > punctuation, regex group.noncapturing options {
 /* @group Apache */
 apache keyword {
   color: #4b83cd; }
+
 apache tag {
   color: #ddb0ad; }
   apache tag > name {
@@ -193,35 +214,53 @@ bash {
   spell-check: disabled; }
 
 /* Deprecated HTML elements */
-entity.name[text='applet'], entity.name[text='basefont'], entity.name[text='center'], entity.name[text='dir'], entity.name[text='font'], entity.name[text='isindex'], entity.name[text='menu'], entity.name[text='s'], entity.name[text='strike'], entity.name[text='u'] {
+entity.name[text='applet'],
+entity.name[text='basefont'],
+entity.name[text='center'],
+entity.name[text='dir'],
+entity.name[text='font'],
+entity.name[text='isindex'],
+entity.name[text='menu'],
+entity.name[text='s'],
+entity.name[text='strike'],
+entity.name[text='u'] {
   background-color: rgba(150, 0, 0, 0.8); }
 
 css group-start, css group-end {
   color: #448c27; }
+
 css group-start name {
   font-weight: bold; }
+
 css keyword.control punctuation {
   color: #91b3e0; }
+
 css property-value keyword, css variable-value keyword {
   color: #448c27; }
 
 js variable {
   color: #333; }
+
 js variable.language {
   color: #ab6526; }
+
 js storage.type, js keyword.new {
   color: #7a3e9d; }
+
 js class.constructor > class {
   color: #333;
   font-weight: bold; }
+
 js function.definition > string > name {
   color: #448c27; }
+
 js function.definition > accessor-path > variable {
   color: #aa3731; }
 
 php keyword.variable, php keyword.variable.language {
   color: #7a3e9d;
   font-weight: bold; }
+
 php constant:not(numeric, language, character) {
   color: #333; }
 
@@ -230,6 +269,7 @@ python variable.language {
 
 markdown hard-break {
   background: #d3e1cd; }
+
 markdown header comment > punctuation, markdown header tag {
   font-weight: normal; }
 
@@ -237,13 +277,17 @@ markdown header comment > punctuation, markdown header tag {
 /* @group Objective-C */
 objective-c storage.type {
   color: #aa3731; }
+
 objective-c keyword.language {
   color: #7a3e9d; }
+
 objective-c > punctuation, objective-c *:not(string, comment) punctuation {
   color: #777; }
+
 objective-c function.definition name {
   font-weight: normal;
   color: #333; }
+
 objective-c function.definition method-segment {
   font-weight: bold; }
 
@@ -272,14 +316,18 @@ ee ee.tag > attribute {
 ee > ee.tag.self-closing.conditional {
   background: #f5f5f5; }
 
-ee > ee.tag.self-closing, ee > ee.tag.self-closing > name, ee > ee.tag.self-closing > punctuation, ee > ee.tag.self-closing attribute-name {
+ee > ee.tag.self-closing,
+ee > ee.tag.self-closing > name,
+ee > ee.tag.self-closing > punctuation,
+ee > ee.tag.self-closing attribute-name {
   color: #7a3e9d; }
 
 ee > ee.tag.self-closing > punctuation.definition {
   color: #b19bbd; }
 
 /* end of the placeholder killer crap */
-ee.tag, ee ee.tag > ee.attribute-name, ee.operator, ee ee.tag > ee.punctuation.definition {
+ee.tag, ee ee.tag > ee.attribute-name, ee.operator,
+ee ee.tag > ee.punctuation.definition {
   color: #b19bbd; }
 
 ee.attribute {
@@ -293,15 +341,19 @@ ee ee.tag > ee.entity.name, ee ee.tag.conditional, ee ee.tag > name {
 haskell processing, haskell comment.documentation {
   color: #aaa;
   font-style: normal; }
+
 haskell identifier.module {
   color: #aa3731;
   font-weight: bold; }
+
 haskell identifier.type {
   color: #7a3e9d;
   font-weight: bold; }
+
 haskell identifier.function, haskell identifier.operator {
   color: #333;
   font-weight: normal; }
+
 haskell identifier.variable {
   color: #7a3e9d; }
 
@@ -309,14 +361,19 @@ haskell identifier.variable {
 /* @group AS3 */
 as3 keyword.definition, as3 keyword.control.flow {
   color: #4b83cd; }
+
 as3 keyword.definition.class, as3 container.method.call > keyword.definition.function {
   color: #aa3731; }
+
 as3 keyword.operators {
   color: #777; }
+
 as3 container.method.call > name {
   color: #333; }
+
 as3 container.method > name {
   color: #7a3e9d; }
+
 as3 literal.keyword, as3 integral.value, as3 numeric.value, as3 literal.numeric, as3 literal.numeric > delimiter {
   color: #ab6526; }
 
