@@ -1,4 +1,4 @@
-//* ==== Do not support -weight/-style/-background/-background-opacity suffixes ====
+//* ==== The following DO NOT SUPPORT -weight/-style/-background/-background-opacity suffixes ====
 
 //* Theme settings
 
@@ -13,6 +13,9 @@ $background: #fff;
 //$current-line: #000;
 //$current-line-opacity: .4;
 //$selection-background: #ff0;
+
+//$insertion-point: #000;
+//$insertion-point-width: 2px;
 
 //$embedded-javascript: #000;
 //$embedded-javascript-background: #fff;
@@ -32,7 +35,7 @@ $background: #fff;
 
 //$monotone-property-values: true;
 
-//* ==== Support -weight/-style/-background/-background-opacity suffixes ====
+//* ==== The following SUPPORT -weight/-style/-background/-background-opacity suffixes ====
 
 //* Common
 

@@ -24,6 +24,9 @@ $current-line: null !default; //: COL
 $current-line-opacity: null !default; //: OP
 $selection-background: default !default; //: COL,default
 
+$insertion-point: null !default; //: COL
+$insertion-point-width: null !default; //: PX
+
 //* Common
 
 $comment: #b2b2b2 !default; //: ALL|REQ
@@ -679,7 +682,14 @@ $apache-tag-name-background-opacity: null !default;
 :document-base {
 	color: $text;
 	@include background($background, $background-opacity);
-	insertion-point-color: $text;
+	@if $insertion-point {
+		insertion-point-color: $insertion-point;
+	} @else {
+		insertion-point-color: $text;
+	}
+	@if $insertion-point-width {
+		insertion-point: $insertion-point-width;
+	}
 	selection-background-color: $selection-background;
 	@if $current-line {
 		@if $current-line-opacity {
