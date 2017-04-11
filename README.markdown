@@ -1,6 +1,6 @@
 # E3 Theme Generator template
 
-This project provides an SCSS template for generating syntax themes for [Espresso 3](http://macrabbit.com/espresso/), along with ports of my two original Espresso themes (Earthworm and Quiet Light)--both as examples for using the template, and for use with Espresso 3.
+This project provides an SCSS template for generating syntax themes for [Espresso 3+](http://espressoapp.com/), along with ports of my two original Espresso themes (Earthworm and Quiet Light)--both as examples for using the template, and for use with Espresso.
 
 ## Installing and using Earthworm or Quiet Light
 
@@ -11,12 +11,14 @@ This project provides an SCSS template for generating syntax themes for [Espress
 
 ## Creating your own theme
 
-1. Download or clone the project, and open the folder in Espresso 3.
+1. Download or clone the project, and open the folder in Espresso.
 2. Duplicate the `ThemeGenerator.esdynamo/_template.scss` file, and rename it `MyThemeName.scss`
 3. Modify your new SCSS file (see below), then move `ThemeGenerator/MyThemeName.css` into the Espresso Themes folder as per above, or create a symlink to it like so:
     
         cd ~/Library/Application\ Support/Espresso/Themes
         ln -s path/to/E3-Theme-Generator/ThemeGenerator/MyThemeName.css MyThemeName.css
+
+If you opt for a symlink, you will be able to see your edits in live time as you modify the SCSS file thanks to Dynamo.
 
 ### Modifying the template
 
@@ -60,11 +62,11 @@ Most of the variables should be fairly self-explanatory, but here are some notes
 
 * Setting the required variables will get you a basic minimum theme, but in order to properly support all languages you will also want to color at least a few of the Markdown and Regex variables (otherwise both languages will end up largely colorless, since their basic zones are a bit different than the other languages).
 * If you wish to support third-party languages, you can add selectors for them beneath the import statement at the bottom of the template file (see Earthworm and Quiet Light for some examples of how this works).
-* Espresso's syntax system offers a lot more granular control than this template offers! If you would like to target other zones, you can do that beneath the import statement, as well (Quiet Light has some good examples of this). You can find full documentation on themes in the [Espresso wiki](http://wiki.macrabbit.com/SyntaxThemes/).
+* Espresso's syntax system offers a lot more granular control than this template offers! If you would like to target other zones, you can do that beneath the import statement, as well (Quiet Light has some good examples of this). You can find full documentation on themes in the [Espresso help](http://help.espressoapp.com/extensions/themes.html).
 
 ## MIT License
 
-Copyright (c) 2016 Ian Beck
+Copyright (c) 2016-2017 Ian Beck
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
