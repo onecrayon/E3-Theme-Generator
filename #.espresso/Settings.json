@@ -2,9 +2,5 @@
   "dynamo" : {
     "version" : "3.0b1",
     "build" : "tagged"
-  },
-  "EBDynamoTreeSettings" : {
-    "EBDynamoTreeVersionKey" : "0.0.4",
-    "EBDynamoTreeIndexingModeKey" : "tagged"
   }
 }
